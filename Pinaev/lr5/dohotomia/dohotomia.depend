@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1524139342 source:d:\metod\lr5\dohotomia\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<math.h>
+
+1393403428 d:\metod\lr5\dohotomia\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 d:\metod\lr5\dohotomia\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+
