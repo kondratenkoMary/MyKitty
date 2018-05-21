@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1526945774 source:d:\kursovaya\gameoflife\main.cpp
+	"rus_io.h"
+	<iostream>
+	<stdio.h>
+	"graphics.h"
+	<vector>
+	<conio.h>
+	<windows.h>
+	<cstdlib>
+
+1390383356 d:\kursovaya\gameoflife\graphics.h
+	<windows.h>
+	<limits.h>
+	<sstream>
+
+1393403428 d:\kursovaya\gameoflife\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+

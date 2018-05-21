@@ -4,7 +4,13 @@
 #include <fstream>
 #include <string>
 using namespace std;
-
+struct Inform{
+string name;
+string latstname;
+string fathername;
+int numbergroup;
+int mark;
+};
 int main()
 {
     setRusLocale(); //поддержка кириллицы
