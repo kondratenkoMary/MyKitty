@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1526945774 source:d:\kursovaya\gameoflife\main.cpp
+1527534465 source:d:\kursovaya\gameoflife\main.cpp
 	"rus_io.h"
 	<iostream>
 	<stdio.h>
