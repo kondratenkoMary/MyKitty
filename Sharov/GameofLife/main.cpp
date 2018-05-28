@@ -9,8 +9,8 @@
 
 using namespace std;
 const int windowX=500,windowY=500;//размер графического окна
-int celloneX,celloneY,n,m,borderColor=1,fillColor=4, deadCellFill=0,countstate;//borderColor-цвет для линий поля
-                                                                               //fillColor-цвет для заполнения живых клеток
+int n,m,countstate,borderColor=1,fillColor=4, deadCellFill=0;//borderColor-цвет для линий поля, fillColor-цвет для заполнения живых клеток
+                                              //deadCellFill-цвет мертвых клеток
 struct Cell{
     int x;
     int y;
@@ -39,7 +39,7 @@ void printCells(vector<vector<Cell> > cells ){ //рисует поле и заполняет живые к
 }
 
 void init(vector<vector<Cell> >&cells ){  //расчет центра клетки для дальнейшей проверки
-  for (int i=0;i<n;i++){                  //на её состояние:мертвое или живое
+  for (int i=0;i<n;i++){                  //на её состояния:мертвое или живое
     for (int j=0;j<m;j++){
       cells[i][j].x=( ( (windowX/m)*j )+ ( (windowX/m)/2) );
       cells[i][j].y=( ( (windowY/m)*i )+ ( (windowY/m)/2) );
@@ -127,6 +127,7 @@ int main () {
     for(int i=0; i<m;i++){
        line(((windowX/m)*i),0,((windowX/m)*i),windowY);//вертикальные линии
     }
+    int celloneX,celloneY;
     do
     {
        if (ismouseclick(WM_LBUTTONDOWN)){
