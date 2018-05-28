@@ -151,6 +151,7 @@ int main () {
       printCells(cells);
     }
     cout<<"Конец игры."<<endl;
+    system("PAUSE");
     getch();
     closegraph();
     return 0;
