@@ -9,7 +9,7 @@
 
 using namespace std;
 const int windowX=500,windowY=500;//размер графического окна
-int n,m,countstate,borderColor=1,fillColor=4, deadCellFill=0;//borderColor-цвет для линий поля, fillColor-цвет для заполнения живых клеток
+int n,m,countstate,borderColor=1,fillColor=9, deadCellFill=0;//borderColor-цвет для линий поля, fillColor-цвет для заполнения живых клеток
                                               //deadCellFill-цвет мертвых клеток
 struct Cell{
     int x;
@@ -116,10 +116,10 @@ int main () {
       cells[i].resize(m);
     }
     init(cells);
-    char q; //переменная типа char для выбора выполнения программы (по шагам или нет)
+    char step; //переменная типа char для выбора выполнения программы (по шагам или нет)
     cout<<"\nВыполнять по шагам? (y/n) "<<endl;
-    cin>>q;
-    initwindow(windowX,windowY," Игра <<Жизнь>> ");
+    cin>>step;
+    initwindow(windowX -(500%m),windowY -(500%n),"Игра <<Жизнь>> ");
     setcolor(borderColor);
     for(int i=0; i<n;i++){
       line(0,((windowY/n)*i),windowX,((windowY/n)*i));//горизонтальные линии
@@ -145,7 +145,7 @@ int main () {
     }
     while (isContinue(cells)){// цикл работы игры с условиями продолжения и
       Sleep(100);  // правилами смены поколения
-      if ((q=='y') || (q=='Y') ){
+      if ((step=='y') || (step=='Y') ){
         getch();
       }
       cells = buildNextGeneration(cells);
