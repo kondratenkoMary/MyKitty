@@ -8,8 +8,8 @@
 #include <cstdlib>
 
 using namespace std;
-const int windowX=500,windowY=500;//размер графического окна
-int n,m,countstate,borderColor=1,fillColor=9, deadCellFill=0;//borderColor-цвет для линий поля, fillColor-цвет для заполнения живых клеток
+const int windowX=600,windowY=600,colorOfText=2;//размер графического окна
+int n,m,countstate,borderColor=8,fillColor=9, deadCellFill=15;//borderColor-цвет для линий поля, fillColor-цвет для заполнения живых клеток
 
 bool flag=true;
                                               //deadCellFill-цвет мертвых клеток
@@ -30,10 +30,10 @@ void printCells(vector<vector<Cell> > cells ){ //рисует поле и заполняет живые к
   for (int i=0;i<n;i++){
     for (int j=0;j<m;j++){
       if (cells[i][j].isAlive==true){
-        setfillstyle(borderColor,fillColor);
+        setfillstyle(1,fillColor);
         floodfill(cells[i][j].x+5,cells[i][j].y+5,borderColor);//выделение живой клетки
       } else {
-               setfillstyle(borderColor,deadCellFill);
+               setfillstyle(1,deadCellFill);
                floodfill(cells[i][j].x+5,cells[i][j].y+5,borderColor);//если клетка не отмечена живой,
              }                                                        //то её цвет не меняется
     }
@@ -142,7 +142,33 @@ int main () {
     char step; //переменная типа char для выбора выполнения программы (по шагам или нет)
     cout<<"\nВыполнять по шагам? (y/n) "<<endl;
     cin>>step;
-    initwindow(windowX -(500%m),windowY -(500%n),"Игра <<Жизнь>> ");
+    initwindow(windowX -(windowX%m),windowY -(windowY%n),"Игра <<Жизнь>> ");
+    floodfill(0,0,deadCellFill);
+    setbkcolor(deadCellFill);
+    settextstyle(10,0,4);
+    setcolor(colorOfText);
+    outtextxy(100,50,"Добро пожаловать!");
+    outtextxy(70,120,"Вас приветствует игра");
+    settextstyle(10,0,6);
+    outtextxy(90,170," <<Жизнь>>");
+    settextstyle(10,0,2);
+    outtextxy(10,270,"Чтобы начать игру нажмите <<Начать>>.");
+    outtextxy(10,295,"Затем отметьте расположение клеток");
+    outtextxy(10,320," и нажмите пробел.");
+    setbkcolor(7);
+    setfillstyle(1,7);
+    bar3d(200,370,400,450,0,0);
+    settextstyle(10,0,4);
+    outtextxy(230,395,"Начать");
+    int X,Y;
+
+    do
+    {
+       if (ismouseclick(WM_LBUTTONDOWN)){
+         getmouseclick(WM_LBUTTONDOWN,X,Y);
+         if( (X>200)&&(X<400)&&(Y>370)&&(Y<450) ){
+    clearviewport();
+    floodfill(0,0,deadCellFill);
     setcolor(borderColor);
     for(int i=0; i<n;i++){
       line(0,((windowY/n)*i),windowX,((windowY/n)*i));//горизонтальные линии
@@ -155,7 +181,12 @@ int main () {
     {
        if (ismouseclick(WM_LBUTTONDOWN)){
          getmouseclick(WM_LBUTTONDOWN, celloneX, celloneY);
-         setfillstyle(1,fillColor);
+         if (fillColor==getpixel(celloneX, celloneY)){
+            setfillstyle(1, deadCellFill);
+         } else {
+             setfillstyle(1, fillColor);
+         }
+         //setfillstyle(1,fillColor);
          floodfill(celloneX, celloneY,borderColor);
        }
     }while( !(GetAsyncKeyState(VK_SPACE)<0) );//состояние клавиши:пока не нажат пробел, отмечаем положение клеток
@@ -183,5 +214,8 @@ int main () {
     getch();
     closegraph();
     return 0;
-}
+ }
+ }
+} while( !(GetAsyncKeyState(VK_TAB)<0) );
 
+}
