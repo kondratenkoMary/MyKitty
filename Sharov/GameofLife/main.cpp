@@ -10,6 +10,8 @@
 using namespace std;
 const int windowX=500,windowY=500;//размер графического окна
 int n,m,countstate,borderColor=1,fillColor=9, deadCellFill=0;//borderColor-цвет для линий поля, fillColor-цвет для заполнения живых клеток
+
+bool flag=true;
                                               //deadCellFill-цвет мертвых клеток
 struct Cell{
     int x;
@@ -47,7 +49,7 @@ void init(vector<vector<Cell> >&cells ){  //расчет центра клетки для дальнейшей 
   }
 }
 
-void compareGenerations(vector<vector<Cell> > &cells, vector<vector<Cell> > &newGeneration){
+/*void compareGenerations(vector<vector<Cell> > &cells, vector<vector<Cell> > &newGeneration){
   for ( int i=0;i<n;i++){
     for (int j=0; j<m;j++){
       if (cells[i][j].isAlive!=newGeneration[i][j].isAlive){
@@ -57,7 +59,7 @@ void compareGenerations(vector<vector<Cell> > &cells, vector<vector<Cell> > &new
     }
   }
   countstate++;
-}
+}*/
 
 vector<vector <Cell> > buildNextGeneration(vector<vector <Cell> > &cells){  //функция поиска соседей
 vector< vector <Cell> > newGeneration;
@@ -86,14 +88,34 @@ for (int i=0;i<n;i++){
                   }
   }
 }
-compareGenerations(cells, newGeneration);
+//compareGenerations(cells, newGeneration);
 return newGeneration;
 }
 
-bool isContinue(vector<vector<Cell> > &cells){ //условия продолжения программы
-  if (countstate > 2){
+bool isContinue(vector<vector<Cell> > &cells,vector<vector<vector<Cell> > > &PeriodCell){ //условия продолжения программы
+  /*if (countstate > 2){
+    return false;
+  }*/
+
+  bool flagPeriod=true;
+  int countPeriod = 0;
+  for (int i=0;i<PeriodCell.size();i++){
+    for(int j=0;j<PeriodCell[i].size();j++){
+        for(int k=0;k<PeriodCell[i][j].size();k++){
+            if (PeriodCell[i][j][k].isAlive!=cells[j][k].isAlive){
+                    flagPeriod=false;
+            }
+        }
+    }
+    if (flagPeriod){
+        countPeriod++;
+    }
+    flagPeriod=true;
+  }
+  if (countPeriod>0){
     return false;
   }
+
   for (int i=0;i<n;i++){
     for (int j=0;j<m;j++){
       if ( cells[i][j].isAlive==true){
@@ -107,6 +129,7 @@ bool isContinue(vector<vector<Cell> > &cells){ //условия продолжения программы
 
 int main () {
     setRusLocale(); //поддержка кириллицы
+    vector<vector<vector<Cell> > > PeriodCell;
     cout<<"\nВас приветствует Игра в ""Жизнь!";
     vector<vector<Cell> >cells;
     cout<<"\nВведите размерность игрового поля (nxm): ";
@@ -143,10 +166,14 @@ int main () {
         }
       }
     }
-    while (isContinue(cells)){// цикл работы игры с условиями продолжения и
+    while (isContinue(cells,PeriodCell)){// цикл работы игры с условиями продолжения и
       Sleep(100);  // правилами смены поколения
       if ((step=='y') || (step=='Y') ){
         getch();
+      }
+      PeriodCell.push_back(cells);
+      if (PeriodCell.size()==10){
+        PeriodCell.erase(PeriodCell.begin());
       }
       cells = buildNextGeneration(cells);
       printCells(cells);
