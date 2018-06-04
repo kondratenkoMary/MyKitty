@@ -8,9 +8,9 @@
 #include <cstdlib>
 
 using namespace std;
-const int windowX=600,windowY=600,colorOfText=2;//размер графического окна
+const int windowX=600,windowY=600,colorOfText=1;//размер графического окна
 int n,m,countstate,borderColor=8,fillColor=9, deadCellFill=15;//borderColor-цвет для линий поля, fillColor-цвет для заполнения живых клеток
-
+string endstring="Конец игры!";
 bool flag=true;
                                               //deadCellFill-цвет мертвых клеток
 struct Cell{
@@ -49,18 +49,6 @@ void init(vector<vector<Cell> >&cells ){  //расчет центра клетки для дальнейшей 
   }
 }
 
-/*void compareGenerations(vector<vector<Cell> > &cells, vector<vector<Cell> > &newGeneration){
-  for ( int i=0;i<n;i++){
-    for (int j=0; j<m;j++){
-      if (cells[i][j].isAlive!=newGeneration[i][j].isAlive){
-        countstate=0;//состояние поколения( ни одна клетка не меняет своего состояния или меняет )
-        return;
-      }
-    }
-  }
-  countstate++;
-}*/
-
 vector<vector <Cell> > buildNextGeneration(vector<vector <Cell> > &cells){  //функция поиска соседей
 vector< vector <Cell> > newGeneration;
 newGeneration = cells;
@@ -88,20 +76,15 @@ for (int i=0;i<n;i++){
                   }
   }
 }
-//compareGenerations(cells, newGeneration);
 return newGeneration;
 }
 
 bool isContinue(vector<vector<Cell> > &cells,vector<vector<vector<Cell> > > &PeriodCell){ //условия продолжения программы
-  /*if (countstate > 2){
-    return false;
-  }*/
-
   bool flagPeriod=true;
   int countPeriod = 0;
-  for (int i=0;i<PeriodCell.size();i++){
-    for(int j=0;j<PeriodCell[i].size();j++){
-        for(int k=0;k<PeriodCell[i][j].size();k++){
+  for (int i=0;i<PeriodCell.size();i++){   //в данных циклах просматриваются состояния поколений
+    for(int j=0;j<PeriodCell[i].size();j++){  //если поколения становятся переодичными (т.е. клетку живут бесконечно)
+        for(int k=0;k<PeriodCell[i][j].size();k++){  // или клетки не меняют своего состояния, то завершаем игру
             if (PeriodCell[i][j][k].isAlive!=cells[j][k].isAlive){
                     flagPeriod=false;
             }
@@ -113,11 +96,12 @@ bool isContinue(vector<vector<Cell> > &cells,vector<vector<vector<Cell> > > &Per
     flagPeriod=true;
   }
   if (countPeriod>0){
+    endstring="Достигнуто стабильное состояние!";
     return false;
   }
 
-  for (int i=0;i<n;i++){
-    for (int j=0;j<m;j++){
+  for (int i=0;i<n;i++){  //в данных цикоах идет проверка на
+    for (int j=0;j<m;j++){  //наличие живых клеток в игровом поле
       if ( cells[i][j].isAlive==true){
         return true;
       }
@@ -134,6 +118,14 @@ int main () {
     vector<vector<Cell> >cells;
     cout<<"\nВведите размерность игрового поля (nxm): ";
     cin>>n>>m;
+    if ((n<=0)||(m<=0)){  //проверка корректности входных данных
+        do
+        {
+            cout<<"\nРазмерность игровго поля задана неверно! Пожалуйста, попробуйте ещё раз.";
+            cout<<endl;
+            cin>>n>>m;
+        }while((n<=0)||(m<=0));
+    }
     cells.resize(n);
     for (int i=0; i<cells.size(); i++){
       cells[i].resize(m);
@@ -142,6 +134,14 @@ int main () {
     char step; //переменная типа char для выбора выполнения программы (по шагам или нет)
     cout<<"\nВыполнять по шагам? (y/n) "<<endl;
     cin>>step;
+    if (  (step!='y')&&(step!='Y')&&(step!='n')&&(step!='N')  ){  //проверка корректности входных данных
+        do
+        {
+            cout<<"\nДанные введены неверно. Попробуйте ещё раз. Выполнять по шагам? (y/n)";
+            cout<<endl;
+            cin>>step;
+        }while(   (step!='y')&&(step!='Y')&&(step!='n')&&(step!='N')  );
+    }
     initwindow(windowX -(windowX%m),windowY -(windowY%n),"Игра <<Жизнь>> ");
     floodfill(0,0,deadCellFill);
     setbkcolor(deadCellFill);
@@ -168,6 +168,7 @@ int main () {
          getmouseclick(WM_LBUTTONDOWN,X,Y);
          if( (X>200)&&(X<400)&&(Y>370)&&(Y<450) ){
     clearviewport();
+    setfillstyle(1,deadCellFill);
     floodfill(0,0,deadCellFill);
     setcolor(borderColor);
     for(int i=0; i<n;i++){
@@ -186,7 +187,6 @@ int main () {
          } else {
              setfillstyle(1, fillColor);
          }
-         //setfillstyle(1,fillColor);
          floodfill(celloneX, celloneY,borderColor);
        }
     }while( !(GetAsyncKeyState(VK_SPACE)<0) );//состояние клавиши:пока не нажат пробел, отмечаем положение клеток
@@ -209,7 +209,18 @@ int main () {
       cells = buildNextGeneration(cells);
       printCells(cells);
     }
-    cout<<"Конец игры."<<endl;
+    Sleep(1000);
+    clearviewport();
+    floodfill(0,0,deadCellFill);
+    setbkcolor(deadCellFill);
+    settextstyle(10,0,4);
+    setcolor(colorOfText);
+    if (endstring=="Конец игры!"){
+        outtextxy(170,250,"Конец игры!");
+    }else{
+        outtextxy(50,250,"Достигнуто");
+        outtextxy(50,285,"стабильное состояние!");
+    }
     system("PAUSE");
     getch();
     closegraph();
