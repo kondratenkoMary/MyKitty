@@ -8,11 +8,9 @@
 #include <cstdlib>
 
 using namespace std;
-const int windowX=600,windowY=600,colorOfText=1;//размер графического окна
-int n,m,countstate,borderColor=8,fillColor=9, deadCellFill=15;//borderColor-цвет для линий поля, fillColor-цвет для заполнения живых клеток
-string endstring="Конец игры!";
-bool flag=true;
-                                              //deadCellFill-цвет мертвых клеток
+const int windowX=600,windowY=600;//размер графического окна
+int n,m,borderColor=8,fillColor=9, deadCellFill=15,colorOfText=1;//borderColor-цвет для линий поля, fillColor-цвет для заполнения живых клеток
+string endstring="Конец игры!";//deadCellFill-цвет мертвых клеток
 struct Cell{
     int x;
     int y;
