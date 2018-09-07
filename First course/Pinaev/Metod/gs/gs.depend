@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1526557697 source:c:\codeblocks\project\gs\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<math.h>
+
+1393403428 c:\codeblocks\project\gs\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 c:\codeblocks\project\gs\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+
+1526557698 source:d:\metod\gs\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<math.h>
+
+1393403428 d:\metod\gs\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 d:\metod\gs\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+

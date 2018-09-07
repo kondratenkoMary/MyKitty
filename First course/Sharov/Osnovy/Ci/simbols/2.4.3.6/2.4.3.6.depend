@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1521973607 source:c:\users\Илья\desktop\программки\2.4.3\2.4.3.6\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<cstdio>
+
+1393480150 c:\users\Илья\desktop\программки\2.4.3\2.4.3.6\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393480126 c:\users\Илья\desktop\программки\2.4.3\2.4.3.6\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+

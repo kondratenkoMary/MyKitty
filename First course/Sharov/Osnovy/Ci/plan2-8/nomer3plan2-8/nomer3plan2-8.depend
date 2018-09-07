@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1524512507 source:d:\osnovy\ci\plan2-8\nomer3plan2-8\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<fstream>
+	<string>
+
+1393403428 d:\osnovy\ci\plan2-8\nomer3plan2-8\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 d:\osnovy\ci\plan2-8\nomer3plan2-8\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1522140288 source:d:\osnovy\ci\massive\n4\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+
+1393403428 d:\osnovy\ci\massive\n4\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 d:\osnovy\ci\massive\n4\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+

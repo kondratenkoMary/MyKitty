@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1523954492 source:d:\osnovy\ci\faili\nomer3\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<fstream>
+
+1393403428 d:\osnovy\ci\faili\nomer3\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 d:\osnovy\ci\faili\nomer3\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+

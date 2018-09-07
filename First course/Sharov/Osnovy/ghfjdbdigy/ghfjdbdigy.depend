@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1527570075 source:d:\osnovy\ghfjdbdigy\main.cpp
+	"rus_io.h"
+	<iostream>
+	<stdio.h>
+	"graphics.h"
+	<vector>
+	<conio.h>
+	<windows.h>
+	<cstdlib>
+
+1393403428 d:\osnovy\ghfjdbdigy\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1390383356 d:\osnovy\ghfjdbdigy\graphics.h
+	<windows.h>
+	<limits.h>
+	<sstream>
+

@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1527167702 source:c:\codeblocks\project\hodcony\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<iomanip>
+
+1393403428 c:\codeblocks\project\hodcony\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 c:\codeblocks\project\hodcony\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+
+1527167704 source:d:\metod\hodcony\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<iomanip>
+
+1393403428 d:\metod\hodcony\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 d:\metod\hodcony\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+

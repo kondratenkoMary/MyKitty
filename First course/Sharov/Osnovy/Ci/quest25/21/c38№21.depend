@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1520782604 source:c:\codeblocks\project\c38¹21\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+
+1393403428 c:\codeblocks\project\c38¹21\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 c:\codeblocks\project\c38¹21\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+
+1520930059 source:d:\osnovy\ci\quest25\21\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+
+1393403428 d:\osnovy\ci\quest25\21\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393403468 d:\osnovy\ci\quest25\21\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+

@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1521535036 source:c:\users\guest\desktop\ipb17\2.4.3\2.4.3.3\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<cstdio>
+
+1393480150 c:\users\guest\desktop\ipb17\2.4.3\2.4.3.3\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393480126 c:\users\guest\desktop\ipb17\2.4.3\2.4.3.3\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+
+1521967729 source:c:\users\Илья\desktop\программки\2.4.3\2.4.3.3\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+	<cstdio>
+
+1393480150 c:\users\Илья\desktop\программки\2.4.3\2.4.3.3\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393480126 c:\users\Илья\desktop\программки\2.4.3\2.4.3.3\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+
+1523007662 source:d:\osnovy\ci\simbols\n3\2.4.3.3\main.cpp
+	<iostream>
+	"rus_io.h"
+	"conio2.h"
+
+1393480150 d:\osnovy\ci\simbols\n3\2.4.3.3\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
+1393480126 d:\osnovy\ci\simbols\n3\2.4.3.3\conio2.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<windows.h>
+	<string.h>
+

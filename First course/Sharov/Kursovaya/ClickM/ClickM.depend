@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1527530878 source:d:\kursovaya\clickm\main.cpp
+	"rus_io.h"
+	<stdio.h>
+	"graphics.h"
+	<conio.h>
+	<windows.h>
+	<vector>
+	<cstdlib>
+
+1390383356 d:\kursovaya\clickm\graphics.h
+	<windows.h>
+	<limits.h>
+	<sstream>
+
+1393403428 d:\kursovaya\clickm\rus_io.h
+	<windows.h>
+	<stdio.h>
+	<iostream>
+
