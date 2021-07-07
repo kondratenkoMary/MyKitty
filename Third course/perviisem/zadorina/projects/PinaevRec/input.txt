@@ -1,0 +1,6 @@
+Program testo
+ 1+4+8+8+z->x;
+ x+x->y;
+ y->x
+ where z=1,t=2
+ .

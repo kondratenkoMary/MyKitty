@@ -1,0 +1,7 @@
+E:\VS Projects\ChatApp\bin\Debug\ChatApp.exe.config
+E:\VS Projects\ChatApp\bin\Debug\ChatApp.exe
+E:\VS Projects\ChatApp\bin\Debug\ChatApp.pdb
+E:\VS Projects\ChatApp\obj\Debug\ChatApp.csprojAssemblyReference.cache
+E:\VS Projects\ChatApp\obj\Debug\ChatApp.csproj.CoreCompileInputs.cache
+E:\VS Projects\ChatApp\obj\Debug\ChatApp.exe
+E:\VS Projects\ChatApp\obj\Debug\ChatApp.pdb

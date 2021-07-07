@@ -1,0 +1,20 @@
+E:\VS Projects\MessageSender\obj\Debug\MessageSender.csprojAssemblyReference.cache
+E:\VS Projects\MessageSender\obj\Debug\MessageSender.Form1.resources
+E:\VS Projects\MessageSender\obj\Debug\MessageSender.Properties.Resources.resources
+E:\VS Projects\MessageSender\obj\Debug\MessageSender.csproj.GenerateResource.cache
+E:\VS Projects\MessageSender\obj\Debug\MessageSender.csproj.CoreCompileInputs.cache
+E:\VS Projects\MessageSender\bin\Debug\MessageSender.exe.config
+E:\VS Projects\MessageSender\bin\Debug\MessageSender.exe
+E:\VS Projects\MessageSender\bin\Debug\MessageSender.pdb
+E:\VS Projects\MessageSender\obj\Debug\MessageSender.exe
+E:\VS Projects\MessageSender\obj\Debug\MessageSender.pdb
+C:\systemprogramm\secondLab\MessageSender\bin\Debug\MessageSender.exe.config
+C:\systemprogramm\secondLab\MessageSender\bin\Debug\MessageSender.exe
+C:\systemprogramm\secondLab\MessageSender\bin\Debug\MessageSender.pdb
+C:\systemprogramm\secondLab\MessageSender\obj\Debug\MessageSender.csprojAssemblyReference.cache
+C:\systemprogramm\secondLab\MessageSender\obj\Debug\MessageSender.Form1.resources
+C:\systemprogramm\secondLab\MessageSender\obj\Debug\MessageSender.Properties.Resources.resources
+C:\systemprogramm\secondLab\MessageSender\obj\Debug\MessageSender.csproj.GenerateResource.cache
+C:\systemprogramm\secondLab\MessageSender\obj\Debug\MessageSender.csproj.CoreCompileInputs.cache
+C:\systemprogramm\secondLab\MessageSender\obj\Debug\MessageSender.exe
+C:\systemprogramm\secondLab\MessageSender\obj\Debug\MessageSender.pdb

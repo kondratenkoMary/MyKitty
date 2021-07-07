@@ -1,0 +1,162 @@
+@border-color: rgba(0, 0, 0, 0.05);
+
+.core-card {
+    height: 270px;
+    cursor: pointer;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.1s;
+
+    background: #ffffff;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    &__new {
+        background-color: rgba(118, 154, 214, 0.2);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #3e67af !important;
+        font-size: 22px;
+        font-weight: 600;
+        border: 0;
+
+        &:hover {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .core-card-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .core-card-body {
+        //flex: 1;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        //white-space: nowrap;
+        text-overflow: ellipsis;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        color: #343434;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #f6f6f6;
+        height: 68px;
+    }
+
+    .core-card-edit {
+        display: -webkit-box;
+        -webkit-box-pack: end;
+        -webkit-box-align: end;
+    }
+
+    .core-card-edit-button {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 6px;
+        // background-image: url("/assets/images/Frame\ \(6\).png");
+    }
+
+    .core-card-control-point-date {
+        color: #5a6268;
+    }
+
+    .core-card-control-point-body {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        //white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__id {
+        font-size: 22px;
+        color: #3e67af;
+        width: 45px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+
+    &__actions {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 1em 0.5em;
+    }
+
+    &__action-button {
+        display: inline-block;
+        padding: 0 0.5em;
+    }
+
+    &__date {
+        flex: 1;
+        font-size: 14px;
+        line-height: 30px;
+        color: #979696;
+    }
+
+    &__stage {
+        text-align: center;
+        width: 129px;
+        font-size: 14px;
+        line-height: 30px;
+        border-radius: 5px;
+    }
+
+    .stage-pause {
+        color: rgb(255, 145, 84);
+        background-color: rgba(255, 145, 84, 0.25);
+    }
+
+    .stage-introduction {
+        color: rgb(151, 127, 255);
+        background-color: rgba(151, 127, 255, 0.25);
+    }
+
+    .stage-development {
+        color: rgb(48, 167, 150);
+        background-color: rgba(48, 167, 150, 0.25);
+    }
+
+    .stage-preparation {
+        color: rgb(111, 149, 215);
+        background-color: rgba(111, 149, 215, 0.25);
+    }
+
+    .stage-completed {
+        color: rgb(160, 212, 142);
+        background-color: rgba(160, 212, 142, 0.25);
+    }
+
+    .stage-postmonitoring {
+        color: rgb(160, 212, 142);
+        background-color: rgba(160, 212, 142, 0.25);
+    }
+
+    &__clock {
+        background-image: url("/assets/images/clock.png");
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+    }
+}
+
+.card-toolbar-time {
+    font-size: 13px;
+    margin-left: 8.3em;
+}

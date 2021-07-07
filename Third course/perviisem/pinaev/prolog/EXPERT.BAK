@@ -1,0 +1,63 @@
+database
+  yes(string)
+  no(string)
+
+predicates
+  good(char)
+  input(char)
+  repeat
+  run
+  man(string)
+  positive(string)
+  negative(string)
+  ask(string,char)
+  remember(string,char)
+  delete_all
+clauses
+  repeat.
+  repeat:-repeat.
+%-----------------------------------------------------------------------------
+% описываем животных
+  man("devushka"):-positive("krasitsa"),positive("platya"),
+                     negative("chinit mashini"),
+                     negative("begat bistro").
+  man("molodoiChelovek"):-positive("korotkie volosi"),positive("vodit mashini"),
+                  positive("dratsa"),
+                  positive("podnimat tyazhesti").
+
+  man("rebenok"):-positive("uchitsa v shkole"),positive("hodit na prodlenku"),
+                        negative("vishego obrazovaniya"),
+                        positive("detski vzglad").
+
+  man("mladenec"):-negative("plachet"),positive("smeetsa"),
+                    negative("rechi"),
+                    negative("razgovarivaet").
+
+  man("s dalekoi planeti...").
+
+% работа с динамической базой данных
+  positive(X):-yes(X),!; no(X),!,fail; ask(X,'y').
+  negative(X):-no(X),!; yes(X),!,fail; ask(X,'n').
+  good(X):-X='n',!.
+  good(X):-X='y',!.
+  input(X):-readchar(X),write(X), nl, good(X),!;
+  write("chto eto?"), nl, input(X), !.
+  ask(X,R):-write(X,"  ?  : "),input(Reply),
+            remember(X,Reply),R=Reply.
+
+  remember(X,'y'):-asserta(yes(X)).
+  remember(X,'n'):-assertz(no(X)).
+
+delete_all:-retract(yes(_)),delete_all.
+delete_all:-retract(no(_)),delete_all.
+delete_all.
+%-----------------------------------------------------------------------------
+  run:-repeat,
+       delete_all,
+       man(X),
+       write("Eto chelovek: ",X,"\n"),
+       write("Zavershit rabotu (y/n): "),readchar(Z),
+       write(Z),nl,
+       Z='y'.
+goal
+  run.

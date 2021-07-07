@@ -1,1 +1,4 @@
 **/*.exe
+site-packages
+.vs
+node_modules

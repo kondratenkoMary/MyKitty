@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "jsx": "react",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./lib",
+    "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "rootDirs": ["src"],
+    "sourceMap": false
+  },
+  "include": [
+    "src",
+    "packages"
+  ]
+}

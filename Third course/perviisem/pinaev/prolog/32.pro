@@ -1,0 +1,40 @@
+domains
+ tlist=integer*
+predicates
+ length(tlist,integer)
+ sumlist(tlist,integer)
+ forminput(tlist)
+ ntoone(integer,tlist)
+ onetonn(integer,integer,tlist)
+ oneton(integer,tlist)
+ reverse(tlist,tlist)
+ rev(tlist,tlist,tlist)
+ bubble_sort(tlist,tlist)
+ b_sort(tlist,tlist,tlist)
+ bubble(integer,tlist,tlist,integer)
+ delete(integer,tlist,tlist)
+clauses
+ length([],0).
+ length([_|T],N):-length(T,N1),N=N1+1.
+ sumlist([],0).
+ sumlist([X|T],S):-sumlist(T,S1),S=S1+X.
+ forminput(List):-readint(X),!,forminput(Nlist),List=[X|Nlist].
+ forminput([]).
+ ntoone(0,[]).
+ ntoone(1,[1]).
+ ntoone(N,List):-N>1,N1=N-1,ntoone(N1,Nlist),List=[N|Nlist].
+ onetonn(N,N,[]).
+ onetonn(N,I,List):-I<N,!,Inew=I+1,onetonn(N,Inew,Nlist),List=[Inew|Nlist].
+ oneton(N,List):-onetonn(N,0,List).
+ reverse(L1,L2):-rev(L1,[],L2).
+ rev([],L2,L2).
+ rev([H|T],SpList,L2):-rev(T,[H|SpList],L2).
+ bubble_sort(List,Sorted):-b_sort(List,[],Sorted).
+ b_sort([],Acc,Acc).
+ b_sort([H|T],Acc,Sorted):-bubble(H,T,NT,Max),
+                        b_sort(NT,[Max|Acc],Sorted). 
+ bubble(X,[],[],X).
+ bubble(X,[Y|T],[Y|NT],Max):-X>Y,bubble(X,T,NT,Max).
+ bubble(X,[Y|T],[X|NT],Max):-X<=Y,bubble(Y,T,NT,Max).
+ delete(A,[A|B],B).
+ delete(A,[B,C|D],[B|E]):-delete(A,[C|D],E).

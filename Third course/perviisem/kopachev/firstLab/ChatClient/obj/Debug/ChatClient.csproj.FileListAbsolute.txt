@@ -1,0 +1,30 @@
+E:\VS Projects\ChatClient\bin\Debug\ChatClient.exe.config
+E:\VS Projects\ChatClient\bin\Debug\ChatClient.exe
+E:\VS Projects\ChatClient\bin\Debug\ChatClient.pdb
+E:\VS Projects\ChatClient\obj\Debug\ChatClient.csprojAssemblyReference.cache
+E:\VS Projects\ChatClient\obj\Debug\MainWindow.g.cs
+E:\VS Projects\ChatClient\obj\Debug\App.g.cs
+E:\VS Projects\ChatClient\obj\Debug\ChatClient_MarkupCompile.cache
+E:\VS Projects\ChatClient\obj\Debug\ChatClient_MarkupCompile.lref
+E:\VS Projects\ChatClient\obj\Debug\MainWindow.baml
+E:\VS Projects\ChatClient\obj\Debug\ChatClient.g.resources
+E:\VS Projects\ChatClient\obj\Debug\ChatClient.Properties.Resources.resources
+E:\VS Projects\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.cache
+E:\VS Projects\ChatClient\obj\Debug\ChatClient.csproj.CoreCompileInputs.cache
+E:\VS Projects\ChatClient\obj\Debug\ChatClient.exe
+E:\VS Projects\ChatClient\obj\Debug\ChatClient.pdb
+C:\systemprogramm\firstLab\ChatClient\bin\Debug\ChatClient.exe.config
+C:\systemprogramm\firstLab\ChatClient\bin\Debug\ChatClient.exe
+C:\systemprogramm\firstLab\ChatClient\bin\Debug\ChatClient.pdb
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\ChatClient.csprojAssemblyReference.cache
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\MainWindow.g.cs
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\App.g.cs
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\ChatClient_MarkupCompile.cache
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\ChatClient_MarkupCompile.lref
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\MainWindow.baml
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\ChatClient.g.resources
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\ChatClient.Properties.Resources.resources
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.cache
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\ChatClient.csproj.CoreCompileInputs.cache
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\ChatClient.exe
+C:\systemprogramm\firstLab\ChatClient\obj\Debug\ChatClient.pdb
